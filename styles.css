@@ -92,21 +92,23 @@ body {
 .contact_container {
     width: 100%;
     max-width: 1050px;
-    height: 657px;
     display: flex;
-   margin: auto;
+    flex-direction: column;
+    margin: auto;
+    
 }
 
 
 
 .home_about_container {
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
+   
 }
 
 .home_title {
@@ -125,7 +127,8 @@ body {
     display: flex;
     width: 100%;
     max-height: 80%;
-    
+    position: relative;
+   
 }
 
 .home_img_container img {
@@ -136,10 +139,10 @@ body {
 
 .home_portada {
     position: absolute;
-    top: 250px;
-    left: 40px;
+    top: 140px;
+    left: 5%;
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
 }
 
 .home_portada img {
@@ -149,8 +152,8 @@ body {
 }
 
 .home_introduce_container {
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    
     
 }
 
@@ -226,10 +229,7 @@ transition: transform 0.5s ease;
 .download_container {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 15px;
-    left: 120%;
-    
+        
 }
 
 .download_link {
@@ -286,8 +286,7 @@ transition: transform 0.5s ease;
 }
 
 .projects_about_container {
-    width: 50%;
-    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -324,20 +323,18 @@ transition: transform 0.5s ease;
 }
 
 .projects_introduce_container {
-    width: 50%;
-    height: 100%;
+    width: 100%;
     position: relative;
     z-index: 1;
     
 }
 
 .projects_body_img {
-    width: 150%;
+    width: 100%;
     max-width: 787.5px;
     height: 100%;
     max-height: 450px;
     border-radius: 20px;
-    position: absolute;
     top: 120px;
     left: -260px;
     overflow: hidden;
@@ -371,13 +368,14 @@ transition: transform 0.5s ease;
 }
 
 .contact_about_container {
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
+    
 }
 
 .contact_title {
@@ -390,7 +388,7 @@ transition: transform 0.5s ease;
     padding-left: 10px;
     position: absolute;
     top: 160px;
-    left: 255px;
+    left: 50px;
 }
 
 .contact_img_container {
@@ -407,32 +405,33 @@ transition: transform 0.5s ease;
 }
 
 .contact_introduce_container {
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    
     position: relative;
     z-index: 1;
     
 }
 
 .contact_form {
-    width: 150%;
+    width: 100%;
     max-width: 600px;
     height: 100%;
     max-height: 300px;
     border-radius: 20px;
-    position: absolute;
     top: 200px;
     left: -260px;
     background-color: rgba(204, 204, 204, 0.1);
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 20px 100px;
+    padding: 20px 60px;
     color: white;
+    
 }
 
 .contact_form button {
-    width: 150px;
+    width: 100%;
+    max-width: 100px;
     height: 80px;
     background-color: var(--bg-second-box-color);
     border: none;
@@ -630,8 +629,7 @@ transition: transform 0.5s ease;
 }
 
 .footer_container {
-    position: fixed;
-    top: 600px;
+    position: none;
     width: 100%;
     height: 50px;
     display: flex;
@@ -642,10 +640,9 @@ transition: transform 0.5s ease;
 
 .social_icons_container {
     height: 100%;
-    width: 50%;
+    width: 100%;
     display: flex;
-    justify-content: end;
-    padding-right: 60px;
+    justify-content: center;
     align-items: center;
     gap: 40px;
     
@@ -656,6 +653,7 @@ transition: transform 0.5s ease;
     font-size: 30px;
     cursor: pointer;
     transition: transform 0.5s ease;
+    
 }
 
 .social_icons:hover {
@@ -718,7 +716,7 @@ transition: transform 0.5s ease;
 } 
 
 
-@media screen and (min-width: 1250px) {
+@media screen and (min-width: 1076px) {
     
     .nav {
         height: 930px;
@@ -734,15 +732,54 @@ transition: transform 0.5s ease;
     .projects_container,
     .contact_container {
         height: 930px;
+        flex-direction: row;
+    }
+
+    .home_about_container {
+        width: 50%;
+        height: 100%;
+        
+    }
+
+    .home_introduce_container {
+        width: 50%;
+        height: 100%;
+        
+    }
+
+    .download_container {
+        position: absolute;
+        top: 15px;
+        left: 120%;
         
     }
 
     .home_portada {
         top: 400px;
-    }    
+        left: 40px;
+        max-width: 400px;
+    } 
+       
     .home_title {
         top: 200px;
         
+    }
+
+    .projects_about_container {
+        width: 50%;
+        height: 100%;
+        
+    }
+        
+    .projects_introduce_container {
+        width: 50%;
+        height: 100%;
+        
+    }
+
+    .projects_body_img {
+        width: 150%;
+        position: absolute;
     }
 
     .projects_title {
@@ -753,11 +790,36 @@ transition: transform 0.5s ease;
         top: 250px;
                 
     }
+
+    .contact_about_container {
+        width: 50%;
+        height: 100%;
+        
+        
+    }
+
+    .contact_title {
+        left: 255px;
+    }
+   
+    .contact_introduce_container {
+        width: 50%;
+        height: 100%;
+       
+        
+    }
     
 
     .contact_form {
+        width: 150%;
         top: 310px;
-                
+        position: absolute;
+        padding: 20px 100px;        
+    }
+
+    .contact_form button {
+        max-width: 150px;
+        
     }
 
     .contact_title {
@@ -766,7 +828,102 @@ transition: transform 0.5s ease;
     }
 
     .footer_container {
+        position: fixed;
         top: 880px;
        
     }
+
+    .social_icons_container {
+        justify-content: end;
+        padding-right: 40px;
+    }
+
+    
 }
+
+@media screen and (min-width: 700px) and (max-width: 1075px) {
+    .home_container,
+    .projects_container,
+    .contact_container {
+        flex-direction: row;
+        height: 657px;
+        
+    }
+
+    .home_about_container {
+        width: 50%;
+        height: 100%;
+        
+    }
+
+    .home_portada {
+        position: absolute;
+        top: 250px;
+        left: 40px;
+        max-width: 400px;
+    }
+
+    .home_introduce_container {
+        width: 50%;
+        height: 100%;
+        
+    }
+
+    .download_container {
+        position: absolute;
+        top: 15px;
+        left: 120%;
+        
+    }
+
+    .projects_about_container {
+        width: 50%;
+        height: 100%;
+        
+    }
+        
+    .projects_introduce_container {
+        width: 50%;
+        height: 100%;
+        
+    }
+
+    .projects_body_img {
+        width: 150%;
+        position: absolute;
+    }  
+
+    .contact_about_container {
+        width: 50%;
+        height: 100%;
+        
+        
+    }
+    
+    .contact_introduce_container {
+        width: 50%;
+        height: 100%;
+       
+        
+    }
+
+    .contact_form {
+        position: absolute;
+        padding: 20px 80px;
+    }
+
+    .contact_form button {
+        max-width: 150px;
+        
+    }
+
+    .footer_container {
+    position: fixed;
+    top: 600px;
+    }
+
+    .social_icons_container {
+        justify-content: end;
+        padding-right: 40px;
+    }
+}    
