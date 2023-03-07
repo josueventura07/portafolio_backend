@@ -141,7 +141,7 @@ body {
 
 .home_portada {
     position: absolute;
-    top: 125px;
+    top: 35%;
     left: 2%;
     width: 100%;
     max-width: 300px;
@@ -537,20 +537,6 @@ transition: transform 0.5s ease;
     
 }
 
-/*.descrip h5 {
-    width: 100px;
-    font-size: 8px;
-    text-align: center;
-    color: rgb(61, 60, 60);
-}
-
-.descrip p {
-    width: 100px;
-    text-align: center;
-    font-size: 8px;
-    color: rgb(61, 60, 60);
-}
-*/
 
 .skills_portafolio-img{
     display: block;
@@ -745,16 +731,19 @@ transition: transform 0.5s ease;
     }
 
     .home_title {
-        top: 90px;
+        top: 250px;
     }    
 
     .home_img_container {
         margin-top: none;
+        
     }
 
     .home_portada {
-        top: 140px;
-        left: 5%;
+        top: 200px;
+        left: 40px;
+        max-width: 400px;
+        
     }    
 
     .home_about_container {
@@ -786,17 +775,7 @@ transition: transform 0.5s ease;
         
     }
 
-    .home_portada {
-        top: 400px;
-        left: 40px;
-        max-width: 400px;
-    } 
-       
-    .home_title {
-        top: 200px;
-        
-    }
-
+    
     .home_icons {
         width: 70%;
         
@@ -887,7 +866,7 @@ transition: transform 0.5s ease;
     
 }
 
-@media screen and (min-width: 600px) and (max-width: 1400px) {
+@media screen and (min-width: 1000px) and (max-width: 1400px) {
     .home_container,
     .projects_container,
     .contact_container {
@@ -897,7 +876,7 @@ transition: transform 0.5s ease;
     }
 
     .home_title {
-        top: 90px;
+        top: 150px;
     }
 
     .home_img_container {
@@ -905,8 +884,10 @@ transition: transform 0.5s ease;
     }
 
     .home_portada {
-        top: 140px;
-        left: 5%;
+        position: absolute;
+        top: 35%;
+        left: 8%;
+        max-width: 400px;
     }
 
     .home_about_container {
@@ -915,13 +896,7 @@ transition: transform 0.5s ease;
         
     }
 
-    .home_portada {
-        position: absolute;
-        top: 250px;
-        left: 40px;
-        max-width: 400px;
-    }
-
+    
     .home_introduce_container {
         width: 50%;
         height: 100%;
@@ -950,7 +925,8 @@ transition: transform 0.5s ease;
         height: 100%;
         
     }
-        
+
+            
     .projects_introduce_container {
         width: 50%;
         height: 100%;
@@ -981,6 +957,10 @@ transition: transform 0.5s ease;
         
         
     }
+
+    .contact_title {
+        left: 260px;
+    }
     
     .contact_introduce_container {
         width: 50%;
@@ -1008,4 +988,46 @@ transition: transform 0.5s ease;
         justify-content: end;
         padding-right: 40px;
     }
-}    
+} 
+
+@media screen and (min-width: 450px) and (max-width: 1000px) {
+    .home_img_container {
+        max-width: 500px;
+    }
+
+    .home_portada {
+        top: 35%;
+        left: 5%;
+        max-width: 400px;
+    }
+
+    .projects_introduce_container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact_title {
+        top: 460px;
+        left: 140px;
+    }
+
+    .contact_img_container {
+        max-width: 500px;
+    }
+
+    .contact_introduce_container {
+        display: flex;
+        justify-content: center;
+    }
+} 
+
+@media screen and (min-width: 400px) and (max-width: 450px) {
+       .home_portada {
+        top: 35%;
+        left: 5%;
+        max-width: 350px;
+    }
+    
+    
+    
+} 
