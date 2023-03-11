@@ -3,6 +3,7 @@ const mainName = document.querySelector('.name')
 const iconWhatsapp = document.querySelector('.whatsapp')
 const phone = document.querySelector('.phone')
 
+
 window.addEventListener('scroll', (e) => {
     if(window.scrollY >= 80) {
         logo.classList.add('hidden_logo')
