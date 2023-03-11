@@ -651,7 +651,7 @@ transition: transform 0.5s ease;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
     
 }
 
@@ -677,6 +677,7 @@ transition: transform 0.5s ease;
     transition: width 1s;
     position: relative;
     transition: width 1s;
+    
 }
 
 .whatsapp:hover {
@@ -881,6 +882,7 @@ transition: transform 0.5s ease;
     .social_icons_container {
         justify-content: end;
         padding-right: 40px;
+        gap: 40px;
     }
 
     
@@ -1019,6 +1021,7 @@ transition: transform 0.5s ease;
     .social_icons_container {
         justify-content: end;
         padding-right: 40px;
+        gap: 40px;
     }
 } 
 
@@ -1056,6 +1059,11 @@ transition: transform 0.5s ease;
         display: flex;
         justify-content: center;
     }
+
+    .social_icons_container {
+        gap: 40px;
+        
+    }
 } 
 
 @media screen and (min-width: 400px) and (max-width: 450px) {
@@ -1074,7 +1082,10 @@ transition: transform 0.5s ease;
         top: 560px;
     }
     
-    
+    .social_icons_container {
+        gap: 40px;
+        
+    }
     
 } 
 
@@ -1087,6 +1098,11 @@ transition: transform 0.5s ease;
     .contact_title {
         left: 10px;
     }
+
+    .social_icons_container {
+        gap: 40px;
+        
+    }
 }
 
 @media screen and (min-width: 550px) and (max-width: 900px) {
@@ -1097,5 +1113,10 @@ transition: transform 0.5s ease;
 
     .contact_title {
         left: 10px;
+    }
+
+    .social_icons_container {
+        gap: 40px;
+        
     }
 }   
