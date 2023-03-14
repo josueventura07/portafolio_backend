@@ -1,7 +1,39 @@
 const logo = document.querySelector('.logo_container')
+const nameO = document.querySelector('.name')
 const mainName = document.querySelector('.name')
 const iconWhatsapp = document.querySelector('.whatsapp')
 const phone = document.querySelector('.phone')
+const copyLogo = logo.cloneNode(true)
+const copyLogo2 = logo.cloneNode(true)
+const projectsContainer = document.querySelector('#projects')
+const contactContainer = document.querySelector('#contact')
+const copyName = nameO.cloneNode(true)
+const copyName2 = nameO.cloneNode(true)
+const navBar = document.querySelector('.nav')
+ 
+
+projectsContainer.insertAdjacentElement('afterbegin', copyLogo)
+navBar.insertAdjacentElement('beforeend', copyName)
+contactContainer.insertAdjacentElement('afterbegin', copyLogo2)
+navBar.insertAdjacentElement('beforeend', copyName2)
+projectsContainer.children[0].setAttribute('class', 'logo_container2 hidden_logo2')
+contactContainer.children[0].setAttribute('class', 'logo_container3 hidden_logo3')
+navBar.children[2].setAttribute('class', 'name2 hidden_name2')
+navBar.children[3].setAttribute('class', 'name3 hidden_name3')
+
+const logo2 = document.querySelector('.logo_container2')
+const logo3 = document.querySelector('.logo_container3')
+const mainName2 = document.querySelector('.name2')
+const mainName3 = document.querySelector('.name3')
+
+logo2.children[0].setAttribute('class', 'main_logo2')
+logo2.children[1].setAttribute('class', 'mini_logo2')
+logo2.children[2].setAttribute('class', 'words_logo2')
+
+
+logo3.children[0].setAttribute('class', 'main_logo3')
+logo3.children[1].setAttribute('class', 'mini_logo3')
+logo3.children[2].setAttribute('class', 'words_logo3')
 
 
 window.addEventListener('scroll', (e) => {
@@ -11,7 +43,37 @@ window.addEventListener('scroll', (e) => {
     } else {
         logo.classList.remove('hidden_logo')
         mainName.classList.remove('hidden_name')
+        
     }
+
+    
+    if(window.scrollY >= 1000) {
+        logo2.classList.remove('hidden_logo2')
+        mainName2.classList.remove('hidden_name2')
+    } else if(window.scrollY < 1000) {
+        logo2.classList.add('hidden_logo2')
+        mainName2.classList.add('hidden_name2')
+    } 
+
+    if(window.scrollY >= 1100) {
+        logo2.classList.add('hidden_logo2')
+        mainName2.classList.add('hidden_name2')
+    }
+
+    if(window.scrollY >= 2100) {
+        logo3.classList.remove('hidden_logo3')
+        mainName3.classList.remove('hidden_name3')
+    } else if(window.scrollY < 2100) {
+        logo3.classList.add('hidden_logo3')
+        mainName3.classList.add('hidden_name3')
+    }
+    
+    if(window.scrollY > 2180) {
+        logo3.classList.add('hidden_logo3')
+        mainName3.classList.add('hidden_name3')
+    } 
+
+   
 })
 
 iconWhatsapp.addEventListener('click', (e) => {

@@ -94,6 +94,8 @@ body {
     font-weight: bold;
 }
 
+
+
 .home_container,
 .projects_container,
 .contact_container {
@@ -305,6 +307,66 @@ transition: transform 0.5s ease;
     z-index: 0;
 }
 
+.logo_container2 {
+    width: 60px;
+    aspect-ratio: 1;
+    color: var(--white-color);
+    border-radius: 50%;
+    border: var(--white-color) solid 6px;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 20px;
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+    transition: transform 1.5s ease;
+}
+
+.hidden_logo2 {
+    transform: translateX(-500px);
+    transition: transform 1.5s ease;
+}
+
+.main_logo2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    
+    
+    
+}
+
+.mini_logo2 {
+    position: absolute;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 10px;
+    font-size: 10px;
+    left: 95%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--bg-default-page);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.words_logo2 {
+    position: absolute;
+    width: 100px;
+    font-size: 20px;
+    left: 150%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--menu-projects);
+    font-weight: bold;
+}
+
 .projects_title {
     width: 100%;
     max-height: 10%;
@@ -393,6 +455,67 @@ transition: transform 0.5s ease;
     position: relative;
     
 }
+
+.logo_container3 {
+    width: 60px;
+    aspect-ratio: 1;
+    color: var(--white-color);
+    border-radius: 50%;
+    border: var(--white-color) solid 6px;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 20px;
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+    transition: transform 1.5s ease;
+}
+
+.hidden_logo3 {
+    transform: translateX(-500px);
+    transition: transform 1.5s ease;
+}
+
+.main_logo3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    
+    
+    
+}
+
+.mini_logo3 {
+    position: absolute;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 10px;
+    font-size: 10px;
+    left: 95%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--bg-default-page);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.words_logo3 {
+    position: absolute;
+    width: 100px;
+    font-size: 20px;
+    left: 150%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--menu-contact);
+    font-weight: bold;
+}
+
 
 .contact_title {
     width: 100%;
@@ -589,9 +712,40 @@ transition: transform 0.5s ease;
     top: 40px;
     right: 20px;
     transition: transform 1.5s ease;
+    
 }
 
 .hidden_name {
+    transform: translateX(500px);
+    transition: transform 1.5s ease;
+}
+
+.name2 {
+    position: fixed;
+    text-align: end;
+    width: 130px;
+    top: 40px;
+    right: 20px;
+    transition: transform 1.5s ease;
+    color: var(--menu-projects);
+}
+
+.hidden_name2 {
+    transform: translateX(500px);
+    transition: transform 1.5s ease;
+}
+
+.name3 {
+    position: fixed;
+    text-align: end;
+    width: 130px;
+    top: 40px;
+    right: 20px;
+    transition: transform 1.5s ease;
+    color: var(--menu-contact);
+}
+
+.hidden_name3 {
     transform: translateX(500px);
     transition: transform 1.5s ease;
 }
@@ -681,13 +835,6 @@ transition: transform 0.5s ease;
     
 }
 
-.whatsapp:hover {
-    width: 130px;
-    display: flex;
-    transition: width 1s;
-}
-
-
 .deploy_whatsapp {
     width: 130px;
     display: flex;
@@ -719,10 +866,7 @@ transition: transform 0.5s ease;
     transition: transform 1s;
 }
 
-.whatsapp:hover > .phone {
-    transform: translateX(30%);
-    transition: transform 1s;
-} 
+
 
 
 @media screen and (min-width: 1400px) {
@@ -886,6 +1030,19 @@ transition: transform 0.5s ease;
         gap: 40px;
     }
 
+    .whatsapp:hover {
+        width: 130px;
+        display: flex;
+        transition: width 1s;
+    }
+
+    .whatsapp:hover > .phone {
+        transform: translateX(30%);
+        transition: transform 1s;
+    } 
+
+    
+
     
 }
 
@@ -1024,6 +1181,17 @@ transition: transform 0.5s ease;
         padding-right: 40px;
         gap: 40px;
     }
+
+    .whatsapp:hover {
+        width: 130px;
+        display: flex;
+        transition: width 1s;
+    }
+
+    .whatsapp:hover > .phone {
+        transform: translateX(30%);
+        transition: transform 1s;
+    } 
 } 
 
 @media screen and (min-width: 450px) and (max-width: 1000px) {
@@ -1065,6 +1233,8 @@ transition: transform 0.5s ease;
         gap: 40px;
         
     }
+
+        
 } 
 
 @media screen and (min-width: 400px) and (max-width: 450px) {
