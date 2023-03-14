@@ -93,7 +93,7 @@ window.addEventListener('scroll', (e) => {
         mainName3.classList.add('hidden_name3')
     }
     
-    if(window.scrollY > 2000) {
+    if(window.scrollY > 2100) {
         logo3.classList.add('hidden_logo3')
         mainName3.classList.add('hidden_name3')
     } 
