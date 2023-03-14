@@ -315,9 +315,10 @@ transition: transform 0.5s ease;
     border: var(--white-color) solid 6px;
     position: relative;
     margin-top: 40px;
-    margin-left: 20px;
+    margin-left: 0px;
     position: fixed;
     top: 0px;
+    left: 20px;
     z-index: 2;
     transition: transform 1.5s ease;
 }
@@ -467,6 +468,7 @@ transition: transform 0.5s ease;
     margin-left: 20px;
     position: fixed;
     top: 0px;
+    left: 0px;
     z-index: 2;
     transition: transform 1.5s ease;
 }
@@ -763,7 +765,7 @@ transition: transform 0.5s ease;
     
 }
 
-.nav li {
+.home, .projects, .contact {
     height: 80px;
     width: 120px;
     color: white;
@@ -771,6 +773,21 @@ transition: transform 0.5s ease;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: color 0.15s ease;
+}
+
+.btnHomeColor {
+    color: var(--menu-home);
+    transition: color 0.15s ease;
+}
+
+.btnProjectsColor {
+    color: var(--menu-projects);
+    transition: color 0.15s ease;
+}
+
+.btnContactColor {
+    color: var(--menu-contact);
     transition: color 0.15s ease;
 }
 
@@ -880,6 +897,7 @@ transition: transform 0.5s ease;
         height: 47%;
                 
     }
+
     
     .home_container,
     .projects_container,
