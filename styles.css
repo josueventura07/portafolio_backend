@@ -849,7 +849,7 @@ transition: transform 0.5s ease;
     transition: width 1s;
     position: relative;
     transition: width 1s;
-    
+    color: white;
 }
 
 .deploy_whatsapp {
@@ -859,6 +859,7 @@ transition: transform 0.5s ease;
     
     
 }
+
 
 .phone {
     position: absolute;
