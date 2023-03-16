@@ -139,33 +139,16 @@ window.addEventListener('scroll', (e) => {
 })
 
 
-let sizeValue1 = 0
-let sizeValue12 = 0
-
-function sizeScreen() {
-    
-    if(screen.width <= 1400 && screen.width >= 1000) {
-             sizeValue1 = 630,
-            sizeValue12 = 1080
-            console.log('object')
-            
-    } else {
-        return {
-            sizeValue1: 900,
-            sizeValue12: 1080
-        }
-    }
-}
-
-
 iconWhatsapp.addEventListener('click', (e) => {
     iconWhatsapp.classList.toggle('deploy_whatsapp')
     phone.classList.toggle('deploy_phone')
-    
+    iconWhatsapp2.classList.remove('deploy_whatsapp2')
+    phone2.classList.remove('deploy_phone2')
 })
 
 iconWhatsapp2.addEventListener('click', (e) => {
     iconWhatsapp2.classList.toggle('deploy_whatsapp2')
     phone2.classList.toggle('deploy_phone2')
-    
+    iconWhatsapp.classList.remove('deploy_whatsapp')
+    phone.classList.remove('deploy_phone')
 })
