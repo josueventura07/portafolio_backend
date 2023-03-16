@@ -62,7 +62,42 @@ logo3.children[1].setAttribute('class', 'mini_logo3')
 logo3.children[2].setAttribute('class', 'words_logo3')
 
 
+
 window.addEventListener('scroll', (e) => {
+    let sizeScreen = screen.width
+    if(sizeScreen <= 1400 && sizeScreen >= 1000) {
+        if(window.scrollY >= 80) {
+            logo.classList.add('hidden_logo')
+            mainName.classList.add('hidden_name')
+        } else {
+            logo.classList.remove('hidden_logo')
+            mainName.classList.remove('hidden_name')
+            
+        }
+        
+        if(window.scrollY >= 640) {
+            logo2.classList.remove('hidden_logo2')
+            mainName2.classList.remove('hidden_name2')
+        } else if(window.scrollY < 640) {
+            logo2.classList.add('hidden_logo2')
+            mainName2.classList.add('hidden_name2')
+        } 
+        
+        if(window.scrollY >= 700) {
+            logo2.classList.add('hidden_logo2')
+            mainName2.classList.add('hidden_name2')
+        }
+        
+        if(window.scrollY >= 850) {
+            logo3.classList.remove('hidden_logo3')
+            mainName3.classList.remove('hidden_name3')
+        } else if(window.scrollY < 850) {
+            logo3.classList.add('hidden_logo3')
+            mainName3.classList.add('hidden_name3')
+        }
+        
+         
+} else {
     if(window.scrollY >= 80) {
         logo.classList.add('hidden_logo')
         mainName.classList.add('hidden_name')
@@ -71,7 +106,7 @@ window.addEventListener('scroll', (e) => {
         mainName.classList.remove('hidden_name')
         
     }
-
+    
     if(window.scrollY >= 900) {
         logo2.classList.remove('hidden_logo2')
         mainName2.classList.remove('hidden_name2')
@@ -79,12 +114,12 @@ window.addEventListener('scroll', (e) => {
         logo2.classList.add('hidden_logo2')
         mainName2.classList.add('hidden_name2')
     } 
-
+    
     if(window.scrollY >= 1080) {
         logo2.classList.add('hidden_logo2')
         mainName2.classList.add('hidden_name2')
     }
-
+    
     if(window.scrollY >= 1800) {
         logo3.classList.remove('hidden_logo3')
         mainName3.classList.remove('hidden_name3')
@@ -96,10 +131,30 @@ window.addEventListener('scroll', (e) => {
     if(window.scrollY > 2100) {
         logo3.classList.add('hidden_logo3')
         mainName3.classList.add('hidden_name3')
-    } 
-
-   
+    }
+}
+    
 })
+
+
+let sizeValue1 = 0
+let sizeValue12 = 0
+
+function sizeScreen() {
+    
+    if(screen.width <= 1400 && screen.width >= 1000) {
+             sizeValue1 = 630,
+            sizeValue12 = 1080
+            console.log('object')
+            
+    } else {
+        return {
+            sizeValue1: 900,
+            sizeValue12: 1080
+        }
+    }
+}
+
 
 iconWhatsapp.addEventListener('click', (e) => {
     iconWhatsapp.classList.toggle('deploy_whatsapp')
