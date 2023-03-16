@@ -835,6 +835,13 @@ transition: transform 0.5s ease;
     
 }
 
+.fa-phone {
+    color: var(--white-color);
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
 .social_icons:hover {
     transform: scale(1.05); 
     transition: transform 0.5s ease;
@@ -853,6 +860,26 @@ transition: transform 0.5s ease;
 }
 
 .deploy_whatsapp {
+    width: 130px;
+    display: flex;
+    transition: width 0.5s;
+    
+    
+}
+
+.whatsapp2 {
+    width: 30px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: width 1s;
+    position: relative;
+    transition: width 1s;
+    color: white;
+}
+
+.deploy_whatsapp2 {
     width: 130px;
     display: flex;
     transition: width 0.5s;
@@ -880,6 +907,29 @@ transition: transform 0.5s ease;
 }
 
 .deploy_phone {
+    transform: translateX(30%);
+    transition: transform 1s;
+}
+
+.phone2 {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--white-color);
+    padding-left: 3px;
+    font-size: 15px;
+}
+
+
+.hidden_phone2 {
+    transform: translateX(-100%);
+    transition: transform 1s;
+}
+
+.deploy_phone2 {
     transform: translateX(30%);
     transition: transform 1s;
 }
@@ -1060,7 +1110,16 @@ transition: transform 0.5s ease;
         transition: transform 1s;
     } 
 
-    
+    .whatsapp2:hover {
+        width: 130px;
+        display: flex;
+        transition: width 1s;
+    }
+
+    .whatsapp2:hover > .phone2 {
+        transform: translateX(30%);
+        transition: transform 1s;
+    }
 
     
 }
@@ -1208,6 +1267,17 @@ transition: transform 0.5s ease;
     }
 
     .whatsapp:hover > .phone {
+        transform: translateX(30%);
+        transition: transform 1s;
+    }
+    
+    .whatsapp2:hover {
+        width: 130px;
+        display: flex;
+        transition: width 1s;
+    }
+
+    .whatsapp2:hover > .phone2 {
         transform: translateX(30%);
         transition: transform 1s;
     } 

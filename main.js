@@ -3,6 +3,8 @@ const nameO = document.querySelector('.name')
 const mainName = document.querySelector('.name')
 const iconWhatsapp = document.querySelector('.whatsapp')
 const phone = document.querySelector('.phone')
+const iconWhatsapp2 = document.querySelector('.whatsapp2')
+const phone2 = document.querySelector('.phone2')
 const copyLogo = logo.cloneNode(true)
 const copyLogo2 = logo.cloneNode(true)
 const projectsContainer = document.querySelector('#projects')
@@ -159,5 +161,11 @@ function sizeScreen() {
 iconWhatsapp.addEventListener('click', (e) => {
     iconWhatsapp.classList.toggle('deploy_whatsapp')
     phone.classList.toggle('deploy_phone')
+    
+})
+
+iconWhatsapp2.addEventListener('click', (e) => {
+    iconWhatsapp2.classList.toggle('deploy_whatsapp2')
+    phone2.classList.toggle('deploy_phone2')
     
 })
