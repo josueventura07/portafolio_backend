@@ -66,7 +66,9 @@ logo3.children[2].setAttribute('class', 'words_logo3')
 
 
 window.addEventListener('scroll', (e) => {
+    
     let sizeScreen = screen.width
+    
     if(sizeScreen <= 1400 && sizeScreen >= 1000) {
         if(window.scrollY >= 80) {
             logo.classList.add('hidden_logo')
@@ -90,10 +92,10 @@ window.addEventListener('scroll', (e) => {
             mainName2.classList.add('hidden_name2')
         }
         
-        if(window.scrollY >= 850) {
+        if(window.scrollY >= 1250) {
             logo3.classList.remove('hidden_logo3')
             mainName3.classList.remove('hidden_name3')
-        } else if(window.scrollY < 850) {
+        } else if(window.scrollY < 1250) {
             logo3.classList.add('hidden_logo3')
             mainName3.classList.add('hidden_name3')
         }
@@ -109,10 +111,10 @@ window.addEventListener('scroll', (e) => {
         
     }
     
-    if(window.scrollY >= 900) {
+    if(window.scrollY >= 1020) {
         logo2.classList.remove('hidden_logo2')
         mainName2.classList.remove('hidden_name2')
-    } else if(window.scrollY < 900) {
+    } else if(window.scrollY < 1020) {
         logo2.classList.add('hidden_logo2')
         mainName2.classList.add('hidden_name2')
     } 
@@ -122,10 +124,10 @@ window.addEventListener('scroll', (e) => {
         mainName2.classList.add('hidden_name2')
     }
     
-    if(window.scrollY >= 1800) {
+    if(window.scrollY >= 1950) {
         logo3.classList.remove('hidden_logo3')
         mainName3.classList.remove('hidden_name3')
-    } else if(window.scrollY < 1800) {
+    } else if(window.scrollY < 1950) {
         logo3.classList.add('hidden_logo3')
         mainName3.classList.add('hidden_name3')
     }
@@ -135,7 +137,7 @@ window.addEventListener('scroll', (e) => {
         mainName3.classList.add('hidden_name3')
     }
 }
-    
+    console.log(window.scrollY)
 })
 
 
