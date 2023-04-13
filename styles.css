@@ -1089,7 +1089,7 @@ transition: transform 0.5s ease;
 
     .footer_container {
         position: fixed;
-        top: 880px;
+        top: 860px;
        
     }
 
@@ -1251,7 +1251,7 @@ transition: transform 0.5s ease;
 
     .footer_container {
     position: fixed;
-    top: 600px;
+    top: 580px;
     }
 
     .social_icons_container {
