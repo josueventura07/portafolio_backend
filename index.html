@@ -123,7 +123,7 @@
         </div>
     </div>
     <div class="contact_introduce_container">
-        <form name="formulario_contacto" netlify  class="contact_form">
+        <form class="contact_form" action="">
             <div class="name_box">
                 <label for="nombre">Nombre</label>
                 <input name="nombre" id="name" class="input_form" placeholder="Nombre" type="nombre" required>
@@ -136,9 +136,16 @@
                 <label for="message">Mensaje</label>
                 <textarea name="mensaje" name="message" placeholder="Mensaje" id="message" cols="30" rows="10" required></textarea>
             </div>
+            <div class="loader none"><h1 class="loading_title">Loading...</h1></div>
             <button>Enviar</button>
         </form>
     </div>
+   </section>
+
+   <section id="thanks" class="modal">
+        <article class="content_response">
+            <h3>Gracias por Comunicarte Conmigo!</h3>
+        </article>
    </section>
 
 <footer class="footer_container">

@@ -15,7 +15,39 @@ const navBar = document.querySelector('.nav')
 const navList = document.querySelectorAll('.nav_list')
 const btnHome = document.querySelector('.home')
 const btnProjects = document.querySelector('.projects')
-const btnContact = document.querySelector('.contact') 
+const btnContact = document.querySelector('.contact')
+
+const sendingMessage = ((d) => {
+    const $form = d.querySelector('.contact_form'),
+        $response = d.querySelector('.content_response'),
+        $loader = d.querySelector('.loader')
+
+        $form.addEventListener('submit', e => {
+            e.preventDefault()
+            $loader.classList.remove('none');
+            fetch('https://formsubmit.co/ajax/josueandresventura@gmail.com', {
+                method: "POST",
+                body: new FormData(e.target)
+            })
+            .then((res) => (res.ok ? res.json() : Promise.reject(res)))
+            .then(json => {
+                console.log(json);
+                location.hash = '#thanks';
+                $form.reset();
+            })
+            .catch(err => {
+                console.log(err);
+                let message = err.statusText || 'Ocurrio un error al enviar, intenta nuevamente'
+                $response.querySelector('h3').innerHtml = `Error ${err.status} : ${message}`
+            })
+            .finally(() => {
+                $loader.classList.add('none');
+                setTimeout(() => {
+                    location.hash = '#close'
+                }, 3000)
+            })
+        })
+})(document)
 
 navList.forEach(element => {
     element.addEventListener('click', (e) => {

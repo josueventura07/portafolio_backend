@@ -934,7 +934,95 @@ transition: transform 0.5s ease;
     transition: transform 1s;
 }
 
+.none {
+    visibility: hidden;
+}
 
+.modal#thanks:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(204, 204, 204, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.modal[id="thanks"]:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.content_response {
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 3px 8px 0px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    
+}
+
+.content_response h3 {
+    width: 100%;
+    max-width: 300px;
+    color: var(--menu-home);
+    font-size: 25px;
+    font-family: poppins;
+    font-weight: bold;
+    text-align: center;
+}
+
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    box-sizing: border-box;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 15px;
+    border: none;
+    border-top: 4px solid var(--menu-home); 
+    animation: rotate360 3s linear infinite;
+}
+
+
+
+.loading_title {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    line-height: 20px;
+    font-size: 10px;
+    animation: rotateName360 3s linear infinite;
+}
+
+@keyframes rotate360 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateName360 {
+    to {
+        transform: rotate(-360deg);
+    }
+}
 
 
 @media screen and (min-width: 1400px) {
@@ -1216,6 +1304,10 @@ transition: transform 0.5s ease;
         display: flex;
     }
 
+    .descrip p {
+        text-align: center;
+    }
+
     .contact_about_container {
         width: 50%;
         height: 100%;
@@ -1248,6 +1340,7 @@ transition: transform 0.5s ease;
         max-width: 150px;
         
     }
+    
 
     .footer_container {
     position: fixed;
