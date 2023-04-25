@@ -605,6 +605,7 @@ transition: transform 0.5s ease;
 .input_form:hover {
     background-color: var(--bg-contact-color);
     transition: background-color 0.20s ease;
+    color: white;
 }
 
 .email_box {
@@ -629,11 +630,13 @@ transition: transform 0.5s ease;
     background-color: var(--bg-second-box-color);
     padding: 5px;
     transition: background-color 0.20s ease;
+    
 }
 
 .message_box textarea:hover {
     background-color: var(--bg-contact-color);
     transition: background-color 0.20s ease;
+    color: white;
 }
 
 .message_box textarea::placeholder {
@@ -956,7 +959,8 @@ transition: transform 0.5s ease;
 .modal {
     width: 100vw;
     height: 100vh;
-    background-color: rgba(204, 204, 204, 0.3);
+    background-color: rgba(204, 204, 204, 0.1);
+    backdrop-filter: blur(2px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -980,10 +984,73 @@ transition: transform 0.5s ease;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0px 3px 8px 0px #000;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
     
+}
+
+.icon_container {
+    display: flex;
+    position: relative;
+    
+}
+
+.response_icon {
+    width: 50px;
+    aspect-ratio: 1;
+    box-sizing: border-box;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 2px 5px 1px #000;
+    rotate: -10deg;
+    animation: faceMove 2s ease-in-out infinite;
+}
+
+.face_icon {
+    display: block;
+    font-size: 58px;
+    color: rgb(175, 143, 2);
+    
+}
+
+.like_icon {
+    font-size: 35px;
+    position: absolute;
+    left: 55px;
+    top: 10px;
+    rotate: -15deg;
+    display: inline-block;
+    animation: likeMove 2s ease-in-out infinite;
+    color: rgb(175, 143, 2);
+    text-shadow: 1px 2px 5px 1px #000;
+    /*reverse*/
+    /*-moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    transform: scale(-1, 1);*/
+}
+
+@keyframes likeMove {
+    to {
+        transform: translateY(-5px); 
+    
+    }
+    from {
+        transform: rotate(15deg);
+    }
+}
+
+@keyframes faceMove {
+    to {
+        transform: translateY(0px); 
+    
+    } from {
+        transform: translateY(10px);
+    }
 }
 
 .content_response h3 {
